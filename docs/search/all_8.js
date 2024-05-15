@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['neuron_0',['Neuron',['../classNeuron.html',1,'']]],
+  ['neuron_0',['Neuron',['../classNeuron.html',1,'Neuron'],['../classNeuron.html#a12e0a9fe8b722ab44cbefa1361dc263b',1,'Neuron::Neuron()']]],
   ['neuroncount_1',['neuronCount',['../classNeuronGroup.html#a76746b0d3ad8753663fa498193ee7cb5',1,'NeuronGroup']]],
   ['neurongroup_2',['NeuronGroup',['../classNeuronGroup.html',1,'NeuronGroup'],['../classNeuronGroup.html#a1338c0597c59d8891120c4074c20eefc',1,'NeuronGroup::NeuronGroup()']]],
   ['neuroninteraction_3',['neuronInteraction',['../classLog.html#a156ddaac0a6444acf004cc18a1fba3ef',1,'Log']]],

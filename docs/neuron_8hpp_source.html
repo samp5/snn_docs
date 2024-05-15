@@ -127,7 +127,7 @@ $(function(){initNavTree('neuron_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  vector&lt;LogData *&gt; log_data;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="comment">// Neuron vaules</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">double</span> membrane_potential;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classNeuron.html#aac81fd09b1ae60d8d0425b641bc0ed8f">   27</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="classNeuron.html#aac81fd09b1ae60d8d0425b641bc0ed8f">membrane_potential</a>; </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keywordtype">int</span> excit_inhib_value;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keywordtype">int</span> id;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  Neuron_t type;</div>
@@ -135,69 +135,88 @@ $(function(){initNavTree('neuron_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordtype">bool</span> active = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="comment">// timestamp data</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordtype">double</span> last_decay;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keywordtype">double</span> refractory_start = 0.0;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="comment">// Edge values</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  vector&lt;Synapse *&gt; PostSynapticConnnections;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  vector&lt;Synapse *&gt; PreSynapticConnections;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="comment">// message list</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  list&lt;Message *&gt; messages;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_class" href="classNeuron.html">Neuron</a>(<span class="keywordtype">int</span> _id, <a class="code hl_class" href="classNeuronGroup.html">NeuronGroup</a> *group, Neuron_t type);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classNeuron.html">~Neuron</a>();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">void</span> addNeighbor(<a class="code hl_class" href="classNeuron.html">Neuron</a> *neighbor, <span class="keywordtype">double</span> weight);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">void</span> addPostSynapticConnection(<a class="code hl_class" href="classSynapse.html">Synapse</a> *synapse);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">void</span> addPreSynapticConnection(<a class="code hl_class" href="classSynapse.html">Synapse</a> *synapse);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="comment">// Running and messaging</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> run();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> sendMessages();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordtype">int</span> recieveMessage();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordtype">void</span> addMessage(<a class="code hl_struct" href="structMessage.html">Message</a> *);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_struct" href="structMessage.html">Message</a> *retrieveMessage();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  vector&lt;Synapse *&gt; &amp;getSynapses() { <span class="keywordflow">return</span> this-&gt;PostSynapticConnnections; }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classNeuron.html#abf1707d4dbe28c3566319a38a65166c4">   35</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="classNeuron.html#abf1707d4dbe28c3566319a38a65166c4">last_decay</a>; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classNeuron.html#aa08d07c711caeb0c9dabc971efb14ed7">   36</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="classNeuron.html#aa08d07c711caeb0c9dabc971efb14ed7">refractory_start</a> =</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      0.0; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="comment">// Edge values</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  vector&lt;Synapse *&gt;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classNeuron.html#adde0fcab17f2565fba226219451ee834">   41</a></span>      <a class="code hl_variable" href="classNeuron.html#adde0fcab17f2565fba226219451ee834">PostSynapticConnnections</a>; </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  vector&lt;Synapse *&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classNeuron.html#a0a0f1d540a1a545552d8c90f5b79a25b">   44</a></span>      <a class="code hl_variable" href="classNeuron.html#a0a0f1d540a1a545552d8c90f5b79a25b">PreSynapticConnections</a>; </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="comment">// message list</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classNeuron.html#a0db3aa3a1baf8e4c06c85e7ab3f20ea4">   48</a></span>  list&lt;Message *&gt; <a class="code hl_variable" href="classNeuron.html#a0db3aa3a1baf8e4c06c85e7ab3f20ea4">messages</a>; </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_function" href="classNeuron.html#a12e0a9fe8b722ab44cbefa1361dc263b">Neuron</a>(<span class="keywordtype">int</span> _id, <a class="code hl_class" href="classNeuronGroup.html">NeuronGroup</a> *group, Neuron_t type);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classNeuron.html">~Neuron</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classNeuron.html#a68e83a6fa5d258bcf741ac63babf224b">addNeighbor</a>(<a class="code hl_class" href="classNeuron.html">Neuron</a> *neighbor, <span class="keywordtype">double</span> weight);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">void</span> addPostSynapticConnection(<a class="code hl_class" href="classSynapse.html">Synapse</a> *synapse);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">void</span> addPreSynapticConnection(<a class="code hl_class" href="classSynapse.html">Synapse</a> *synapse);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">// Running and messaging</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNeuron.html#a4c7e22cc4b19ce29337dd5bec7ed5b34">run</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classNeuron.html#aa3ded32b9bcd348137a99c5bd1ae56ae">sendMessages</a>();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="comment">// State operations</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> reset();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">void</span> refractory();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">void</span> setType(Neuron_t type);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordtype">void</span> activate();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordtype">void</span> deactivate();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keywordtype">void</span> retroactiveDecay(<span class="keywordtype">double</span> from, <span class="keywordtype">double</span> to);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keywordtype">void</span> accumulatePotential(<span class="keywordtype">double</span> value);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">int</span> generateInhibitoryStatus();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="comment">// GETTERS</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordtype">bool</span> isActivated() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordtype">double</span> getPotential();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <a class="code hl_class" href="classNeuronGroup.html">NeuronGroup</a> *getGroup();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keyword">const</span> list&lt;Message *&gt; &amp;getMessageVector();</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keyword">const</span> vector&lt;Synapse *&gt; &amp;getPostSynaptic() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keyword">const</span> vector&lt;Synapse *&gt; &amp;getPresynaptic() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordtype">double</span> getLastDecay() { <span class="keywordflow">return</span> this-&gt;last_decay; }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordtype">int</span> getBias() { <span class="keywordflow">return</span> this-&gt;excit_inhib_value; }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  Neuron_t getType() { <span class="keywordflow">return</span> this-&gt;type; }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">int</span> getID() { <span class="keywordflow">return</span> id; }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classNeuron.html#a96e5633ab35d0c567712112607828fc9">recieveMessage</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classNeuron.html#abea5c41bfae8ec062bcc1ac8808beb71">addMessage</a>(<a class="code hl_struct" href="structMessage.html">Message</a> *);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_struct" href="structMessage.html">Message</a> *<a class="code hl_function" href="classNeuron.html#a7d9097ec78bd4b80d5d37074c278a421">retrieveMessage</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  vector&lt;Synapse *&gt; &amp;getSynapses() { <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="classNeuron.html#adde0fcab17f2565fba226219451ee834">PostSynapticConnnections</a>; }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="comment">// State operations</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> reset();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classNeuron.html#ac35d991a6113da31ad2961ca28242722">refractory</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classNeuron.html#ad680eded50a4eafd4b44c873040bf414">setType</a>(Neuron_t type);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordtype">void</span> activate();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">void</span> deactivate();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classNeuron.html#a49979c1a2884a7e736de8af3d3ce670e">retroactiveDecay</a>(<span class="keywordtype">double</span> from, <span class="keywordtype">double</span> to);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classNeuron.html#ac426f10c4652ba939d31a230e2711021">accumulatePotential</a>(<span class="keywordtype">double</span> value);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordtype">int</span> generateInhibitoryStatus();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="comment">// GETTERS</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classNeuron.html#af45ab4e600e3db93e11dff8ed96a8927">isActivated</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordtype">double</span> getPotential();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <a class="code hl_class" href="classNeuronGroup.html">NeuronGroup</a> *<a class="code hl_function" href="classNeuron.html#a4b0b017ce819f15f6dbb73b1d6b97480">getGroup</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keyword">const</span> list&lt;Message *&gt; &amp;getMessageVector();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keyword">const</span> vector&lt;Synapse *&gt; &amp;getPostSynaptic() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keyword">const</span> vector&lt;Synapse *&gt; &amp;getPresynaptic() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="comment">// log operations</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">void</span> addData(<span class="keywordtype">double</span> time, <a class="code hl_enumeration" href="message_8hpp.html#a1045de1f1e71fb94e8c4cac584c24367">Message_t</a> message_type);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classNeuron.html#ae9698266eec97fb479f64bae670fd10b">transferData</a>();</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
-</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordtype">double</span> getLastDecay() { <span class="keywordflow">return</span> this-&gt;<a class="code hl_variable" href="classNeuron.html#abf1707d4dbe28c3566319a38a65166c4">last_decay</a>; }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">int</span> getBias() { <span class="keywordflow">return</span> this-&gt;excit_inhib_value; }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  Neuron_t getType() { <span class="keywordflow">return</span> this-&gt;type; }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keywordtype">int</span> getID() { <span class="keywordflow">return</span> id; }</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif </span><span class="comment">// !NEURON</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="comment">// log operations</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordtype">void</span> addData(<span class="keywordtype">double</span> time, <a class="code hl_enumeration" href="message_8hpp.html#a1045de1f1e71fb94e8c4cac584c24367">Message_t</a> message_type);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classNeuron.html#ae9698266eec97fb479f64bae670fd10b">transferData</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif </span><span class="comment">// !NEURON</span></div>
 <div class="ttc" id="aclassLog_html"><div class="ttname"><a href="classLog.html">Log</a></div><div class="ttdoc">Logging class.</div><div class="ttdef"><b>Definition</b> log.hpp:71</div></div>
 <div class="ttc" id="aclassNeuronGroup_html"><div class="ttname"><a href="classNeuronGroup.html">NeuronGroup</a></div><div class="ttdef"><b>Definition</b> neuron_group.hpp:18</div></div>
 <div class="ttc" id="aclassNeuron_html"><div class="ttname"><a href="classNeuron.html">Neuron</a></div><div class="ttdef"><b>Definition</b> neuron.hpp:22</div></div>
-<div class="ttc" id="aclassNeuron_html_ae9698266eec97fb479f64bae670fd10b"><div class="ttname"><a href="classNeuron.html#ae9698266eec97fb479f64bae670fd10b">Neuron::transferData</a></div><div class="ttdeci">void transferData()</div><div class="ttdoc">Transfer data to Log.</div><div class="ttdef"><b>Definition</b> neuron.cpp:45</div></div>
+<div class="ttc" id="aclassNeuron_html_a0a0f1d540a1a545552d8c90f5b79a25b"><div class="ttname"><a href="classNeuron.html#a0a0f1d540a1a545552d8c90f5b79a25b">Neuron::PreSynapticConnections</a></div><div class="ttdeci">vector&lt; Synapse * &gt; PreSynapticConnections</div><div class="ttdef"><b>Definition</b> neuron.hpp:44</div></div>
+<div class="ttc" id="aclassNeuron_html_a0db3aa3a1baf8e4c06c85e7ab3f20ea4"><div class="ttname"><a href="classNeuron.html#a0db3aa3a1baf8e4c06c85e7ab3f20ea4">Neuron::messages</a></div><div class="ttdeci">list&lt; Message * &gt; messages</div><div class="ttdef"><b>Definition</b> neuron.hpp:48</div></div>
+<div class="ttc" id="aclassNeuron_html_a12e0a9fe8b722ab44cbefa1361dc263b"><div class="ttname"><a href="classNeuron.html#a12e0a9fe8b722ab44cbefa1361dc263b">Neuron::Neuron</a></div><div class="ttdeci">Neuron(int _id, NeuronGroup *group, Neuron_t type)</div><div class="ttdoc">Construct a Neuron.</div><div class="ttdef"><b>Definition</b> neuron.cpp:27</div></div>
+<div class="ttc" id="aclassNeuron_html_a49979c1a2884a7e736de8af3d3ce670e"><div class="ttname"><a href="classNeuron.html#a49979c1a2884a7e736de8af3d3ce670e">Neuron::retroactiveDecay</a></div><div class="ttdeci">void retroactiveDecay(double from, double to)</div><div class="ttdoc">retroactively decays a Neuron::membrane_potential.</div><div class="ttdef"><b>Definition</b> neuron.cpp:271</div></div>
+<div class="ttc" id="aclassNeuron_html_a4b0b017ce819f15f6dbb73b1d6b97480"><div class="ttname"><a href="classNeuron.html#a4b0b017ce819f15f6dbb73b1d6b97480">Neuron::getGroup</a></div><div class="ttdeci">NeuronGroup * getGroup()</div><div class="ttdoc">Return a pointer to the owning group.</div><div class="ttdef"><b>Definition</b> neuron.cpp:206</div></div>
+<div class="ttc" id="aclassNeuron_html_a4c7e22cc4b19ce29337dd5bec7ed5b34"><div class="ttname"><a href="classNeuron.html#a4c7e22cc4b19ce29337dd5bec7ed5b34">Neuron::run</a></div><div class="ttdeci">virtual void run()</div><div class="ttdoc">Main run cycle for a Neuron.</div><div class="ttdef"><b>Definition</b> neuron.cpp:164</div></div>
+<div class="ttc" id="aclassNeuron_html_a68e83a6fa5d258bcf741ac63babf224b"><div class="ttname"><a href="classNeuron.html#a68e83a6fa5d258bcf741ac63babf224b">Neuron::addNeighbor</a></div><div class="ttdeci">void addNeighbor(Neuron *neighbor, double weight)</div><div class="ttdoc">adds a Synapse to Neuron::PostSynapticConnnections. Adds a Synapse to both the Presynaptic and Postsy...</div><div class="ttdef"><b>Definition</b> neuron.cpp:72</div></div>
+<div class="ttc" id="aclassNeuron_html_a7d9097ec78bd4b80d5d37074c278a421"><div class="ttname"><a href="classNeuron.html#a7d9097ec78bd4b80d5d37074c278a421">Neuron::retrieveMessage</a></div><div class="ttdeci">Message * retrieveMessage()</div><div class="ttdoc">retrive the oldest Message from Neuron::messages.</div><div class="ttdef"><b>Definition</b> neuron.cpp:242</div></div>
+<div class="ttc" id="aclassNeuron_html_a96e5633ab35d0c567712112607828fc9"><div class="ttname"><a href="classNeuron.html#a96e5633ab35d0c567712112607828fc9">Neuron::recieveMessage</a></div><div class="ttdeci">int recieveMessage()</div><div class="ttdoc">Retrieve and process all messages in the queue.</div><div class="ttdef"><b>Definition</b> neuron.cpp:98</div></div>
+<div class="ttc" id="aclassNeuron_html_aa08d07c711caeb0c9dabc971efb14ed7"><div class="ttname"><a href="classNeuron.html#aa08d07c711caeb0c9dabc971efb14ed7">Neuron::refractory_start</a></div><div class="ttdeci">double refractory_start</div><div class="ttdef"><b>Definition</b> neuron.hpp:36</div></div>
+<div class="ttc" id="aclassNeuron_html_aa3ded32b9bcd348137a99c5bd1ae56ae"><div class="ttname"><a href="classNeuron.html#aa3ded32b9bcd348137a99c5bd1ae56ae">Neuron::sendMessages</a></div><div class="ttdeci">virtual void sendMessages()</div><div class="ttdoc">send Messages to all elements of Neuron::PostSynapticConnnections.</div><div class="ttdef"><b>Definition</b> neuron.cpp:143</div></div>
+<div class="ttc" id="aclassNeuron_html_aac81fd09b1ae60d8d0425b641bc0ed8f"><div class="ttname"><a href="classNeuron.html#aac81fd09b1ae60d8d0425b641bc0ed8f">Neuron::membrane_potential</a></div><div class="ttdeci">double membrane_potential</div><div class="ttdef"><b>Definition</b> neuron.hpp:27</div></div>
+<div class="ttc" id="aclassNeuron_html_abea5c41bfae8ec062bcc1ac8808beb71"><div class="ttname"><a href="classNeuron.html#abea5c41bfae8ec062bcc1ac8808beb71">Neuron::addMessage</a></div><div class="ttdeci">void addMessage(Message *)</div><div class="ttdoc">Adds a message to the queue.</div><div class="ttdef"><b>Definition</b> neuron.cpp:215</div></div>
+<div class="ttc" id="aclassNeuron_html_abf1707d4dbe28c3566319a38a65166c4"><div class="ttname"><a href="classNeuron.html#abf1707d4dbe28c3566319a38a65166c4">Neuron::last_decay</a></div><div class="ttdeci">double last_decay</div><div class="ttdef"><b>Definition</b> neuron.hpp:35</div></div>
+<div class="ttc" id="aclassNeuron_html_ac35d991a6113da31ad2961ca28242722"><div class="ttname"><a href="classNeuron.html#ac35d991a6113da31ad2961ca28242722">Neuron::refractory</a></div><div class="ttdeci">void refractory()</div><div class="ttdoc">Starts the refractory period for a Neuron.</div><div class="ttdef"><b>Definition</b> neuron.cpp:180</div></div>
+<div class="ttc" id="aclassNeuron_html_ac426f10c4652ba939d31a230e2711021"><div class="ttname"><a href="classNeuron.html#ac426f10c4652ba939d31a230e2711021">Neuron::accumulatePotential</a></div><div class="ttdeci">void accumulatePotential(double value)</div><div class="ttdoc">adds to the Neuron::membrane_potential.</div><div class="ttdef"><b>Definition</b> neuron.cpp:326</div></div>
+<div class="ttc" id="aclassNeuron_html_ad680eded50a4eafd4b44c873040bf414"><div class="ttname"><a href="classNeuron.html#ad680eded50a4eafd4b44c873040bf414">Neuron::setType</a></div><div class="ttdeci">void setType(Neuron_t type)</div><div class="ttdoc">Sets the type of a Neuron.</div><div class="ttdef"><b>Definition</b> neuron.cpp:319</div></div>
+<div class="ttc" id="aclassNeuron_html_adde0fcab17f2565fba226219451ee834"><div class="ttname"><a href="classNeuron.html#adde0fcab17f2565fba226219451ee834">Neuron::PostSynapticConnnections</a></div><div class="ttdeci">vector&lt; Synapse * &gt; PostSynapticConnnections</div><div class="ttdef"><b>Definition</b> neuron.hpp:41</div></div>
+<div class="ttc" id="aclassNeuron_html_ae9698266eec97fb479f64bae670fd10b"><div class="ttname"><a href="classNeuron.html#ae9698266eec97fb479f64bae670fd10b">Neuron::transferData</a></div><div class="ttdeci">void transferData()</div><div class="ttdoc">Transfer data to Log.</div><div class="ttdef"><b>Definition</b> neuron.cpp:57</div></div>
+<div class="ttc" id="aclassNeuron_html_af45ab4e600e3db93e11dff8ed96a8927"><div class="ttname"><a href="classNeuron.html#af45ab4e600e3db93e11dff8ed96a8927">Neuron::isActivated</a></div><div class="ttdeci">bool isActivated() const</div><div class="ttdoc">Checks activation status of a Neuron.</div><div class="ttdef"><b>Definition</b> neuron.cpp:199</div></div>
 <div class="ttc" id="aclassSynapse_html"><div class="ttname"><a href="classSynapse.html">Synapse</a></div><div class="ttdoc">Synapse class for managing connections.</div><div class="ttdef"><b>Definition</b> synapse.hpp:13</div></div>
 <div class="ttc" id="alog_8hpp_html"><div class="ttname"><a href="log_8hpp.html">log.hpp</a></div></div>
 <div class="ttc" id="amessage_8hpp_html"><div class="ttname"><a href="message_8hpp.html">message.hpp</a></div></div>

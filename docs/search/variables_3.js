@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['neurons_0',['neurons',['../classSNN.html#aac15ac34919fbafa7e7830a444fa2e66',1,'SNN']]]
+  ['last_5fdecay_0',['last_decay',['../classNeuron.html#abf1707d4dbe28c3566319a38a65166c4',1,'Neuron']]]
 ];

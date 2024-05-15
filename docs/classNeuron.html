@@ -111,11 +111,11 @@ Inheritance diagram for Neuron:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a12e0a9fe8b722ab44cbefa1361dc263b" id="r_a12e0a9fe8b722ab44cbefa1361dc263b"><td class="memItemLeft" align="right" valign="top"><a id="a12e0a9fe8b722ab44cbefa1361dc263b" name="a12e0a9fe8b722ab44cbefa1361dc263b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Neuron</b> (int _id, <a class="el" href="classNeuronGroup.html">NeuronGroup</a> *group, Neuron_t type)</td></tr>
+<tr class="memitem:a12e0a9fe8b722ab44cbefa1361dc263b" id="r_a12e0a9fe8b722ab44cbefa1361dc263b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12e0a9fe8b722ab44cbefa1361dc263b">Neuron</a> (int _id, <a class="el" href="classNeuronGroup.html">NeuronGroup</a> *group, Neuron_t type)</td></tr>
+<tr class="memdesc:a12e0a9fe8b722ab44cbefa1361dc263b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classNeuron.html">Neuron</a>.  <br /></td></tr>
 <tr class="separator:a12e0a9fe8b722ab44cbefa1361dc263b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68e83a6fa5d258bcf741ac63babf224b" id="r_a68e83a6fa5d258bcf741ac63babf224b"><td class="memItemLeft" align="right" valign="top"><a id="a68e83a6fa5d258bcf741ac63babf224b" name="a68e83a6fa5d258bcf741ac63babf224b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addNeighbor</b> (<a class="el" href="classNeuron.html">Neuron</a> *neighbor, double weight)</td></tr>
+<tr class="memitem:a68e83a6fa5d258bcf741ac63babf224b" id="r_a68e83a6fa5d258bcf741ac63babf224b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68e83a6fa5d258bcf741ac63babf224b">addNeighbor</a> (<a class="el" href="classNeuron.html">Neuron</a> *neighbor, double weight)</td></tr>
+<tr class="memdesc:a68e83a6fa5d258bcf741ac63babf224b"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds a <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> to <a class="el" href="#adde0fcab17f2565fba226219451ee834">Neuron::PostSynapticConnnections</a>. Adds a <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> to both the Presynaptic and Postsynapic <a class="el" href="classNeuron.html">Neuron</a> respective <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> vectors. Either <a class="el" href="#adde0fcab17f2565fba226219451ee834">Neuron::PostSynapticConnnections</a> or <a class="el" href="#a0a0f1d540a1a545552d8c90f5b79a25b">Neuron::PreSynapticConnections</a>  <br /></td></tr>
 <tr class="separator:a68e83a6fa5d258bcf741ac63babf224b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a444d57f2ebeb170ca182543911626ff9" id="r_a444d57f2ebeb170ca182543911626ff9"><td class="memItemLeft" align="right" valign="top"><a id="a444d57f2ebeb170ca182543911626ff9" name="a444d57f2ebeb170ca182543911626ff9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addPostSynapticConnection</b> (<a class="el" href="classSynapse.html">Synapse</a> *synapse)</td></tr>
@@ -124,28 +124,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addPostSynapticConnec
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addPreSynapticConnection</b> (<a class="el" href="classSynapse.html">Synapse</a> *synapse)</td></tr>
 <tr class="separator:a900804ad21f820157c3fe466dcab2885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c7e22cc4b19ce29337dd5bec7ed5b34" id="r_a4c7e22cc4b19ce29337dd5bec7ed5b34"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c7e22cc4b19ce29337dd5bec7ed5b34">run</a> ()</td></tr>
+<tr class="memdesc:a4c7e22cc4b19ce29337dd5bec7ed5b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main run cycle for a <a class="el" href="classNeuron.html">Neuron</a>.  <br /></td></tr>
 <tr class="separator:a4c7e22cc4b19ce29337dd5bec7ed5b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3ded32b9bcd348137a99c5bd1ae56ae" id="r_aa3ded32b9bcd348137a99c5bd1ae56ae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3ded32b9bcd348137a99c5bd1ae56ae">sendMessages</a> ()</td></tr>
+<tr class="memdesc:aa3ded32b9bcd348137a99c5bd1ae56ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">send Messages to all elements of <a class="el" href="#adde0fcab17f2565fba226219451ee834">Neuron::PostSynapticConnnections</a>.  <br /></td></tr>
 <tr class="separator:aa3ded32b9bcd348137a99c5bd1ae56ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96e5633ab35d0c567712112607828fc9" id="r_a96e5633ab35d0c567712112607828fc9"><td class="memItemLeft" align="right" valign="top"><a id="a96e5633ab35d0c567712112607828fc9" name="a96e5633ab35d0c567712112607828fc9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>recieveMessage</b> ()</td></tr>
+<tr class="memitem:a96e5633ab35d0c567712112607828fc9" id="r_a96e5633ab35d0c567712112607828fc9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96e5633ab35d0c567712112607828fc9">recieveMessage</a> ()</td></tr>
+<tr class="memdesc:a96e5633ab35d0c567712112607828fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve and process all messages in the queue.  <br /></td></tr>
 <tr class="separator:a96e5633ab35d0c567712112607828fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abea5c41bfae8ec062bcc1ac8808beb71" id="r_abea5c41bfae8ec062bcc1ac8808beb71"><td class="memItemLeft" align="right" valign="top"><a id="abea5c41bfae8ec062bcc1ac8808beb71" name="abea5c41bfae8ec062bcc1ac8808beb71"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addMessage</b> (<a class="el" href="structMessage.html">Message</a> *)</td></tr>
+<tr class="memitem:abea5c41bfae8ec062bcc1ac8808beb71" id="r_abea5c41bfae8ec062bcc1ac8808beb71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abea5c41bfae8ec062bcc1ac8808beb71">addMessage</a> (<a class="el" href="structMessage.html">Message</a> *)</td></tr>
+<tr class="memdesc:abea5c41bfae8ec062bcc1ac8808beb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a message to the queue.  <br /></td></tr>
 <tr class="separator:abea5c41bfae8ec062bcc1ac8808beb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d9097ec78bd4b80d5d37074c278a421" id="r_a7d9097ec78bd4b80d5d37074c278a421"><td class="memItemLeft" align="right" valign="top"><a id="a7d9097ec78bd4b80d5d37074c278a421" name="a7d9097ec78bd4b80d5d37074c278a421"></a>
-<a class="el" href="structMessage.html">Message</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>retrieveMessage</b> ()</td></tr>
+<tr class="memitem:a7d9097ec78bd4b80d5d37074c278a421" id="r_a7d9097ec78bd4b80d5d37074c278a421"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structMessage.html">Message</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d9097ec78bd4b80d5d37074c278a421">retrieveMessage</a> ()</td></tr>
+<tr class="memdesc:a7d9097ec78bd4b80d5d37074c278a421"><td class="mdescLeft">&#160;</td><td class="mdescRight">retrive the oldest <a class="el" href="structMessage.html">Message</a> from <a class="el" href="#a0db3aa3a1baf8e4c06c85e7ab3f20ea4">Neuron::messages</a>.  <br /></td></tr>
 <tr class="separator:a7d9097ec78bd4b80d5d37074c278a421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9df83f82d4a5069a1557931a2a3304e" id="r_ad9df83f82d4a5069a1557931a2a3304e"><td class="memItemLeft" align="right" valign="top"><a id="ad9df83f82d4a5069a1557931a2a3304e" name="ad9df83f82d4a5069a1557931a2a3304e"></a>
 vector&lt; <a class="el" href="classSynapse.html">Synapse</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getSynapses</b> ()</td></tr>
 <tr class="separator:ad9df83f82d4a5069a1557931a2a3304e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6817fc5bf2128150b41b65e74f018408" id="r_a6817fc5bf2128150b41b65e74f018408"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6817fc5bf2128150b41b65e74f018408">reset</a> ()</td></tr>
 <tr class="separator:a6817fc5bf2128150b41b65e74f018408"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac35d991a6113da31ad2961ca28242722" id="r_ac35d991a6113da31ad2961ca28242722"><td class="memItemLeft" align="right" valign="top"><a id="ac35d991a6113da31ad2961ca28242722" name="ac35d991a6113da31ad2961ca28242722"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>refractory</b> ()</td></tr>
+<tr class="memitem:ac35d991a6113da31ad2961ca28242722" id="r_ac35d991a6113da31ad2961ca28242722"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac35d991a6113da31ad2961ca28242722">refractory</a> ()</td></tr>
+<tr class="memdesc:ac35d991a6113da31ad2961ca28242722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the refractory period for a <a class="el" href="classNeuron.html">Neuron</a>.  <br /></td></tr>
 <tr class="separator:ac35d991a6113da31ad2961ca28242722"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad680eded50a4eafd4b44c873040bf414" id="r_ad680eded50a4eafd4b44c873040bf414"><td class="memItemLeft" align="right" valign="top"><a id="ad680eded50a4eafd4b44c873040bf414" name="ad680eded50a4eafd4b44c873040bf414"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setType</b> (Neuron_t type)</td></tr>
+<tr class="memitem:ad680eded50a4eafd4b44c873040bf414" id="r_ad680eded50a4eafd4b44c873040bf414"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad680eded50a4eafd4b44c873040bf414">setType</a> (Neuron_t type)</td></tr>
+<tr class="memdesc:ad680eded50a4eafd4b44c873040bf414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the type of a <a class="el" href="classNeuron.html">Neuron</a>.  <br /></td></tr>
 <tr class="separator:ad680eded50a4eafd4b44c873040bf414"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11d0f6ce597960e7b32a8988adcb25df" id="r_a11d0f6ce597960e7b32a8988adcb25df"><td class="memItemLeft" align="right" valign="top"><a id="a11d0f6ce597960e7b32a8988adcb25df" name="a11d0f6ce597960e7b32a8988adcb25df"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>activate</b> ()</td></tr>
@@ -153,23 +155,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>activate</b> ()</td><
 <tr class="memitem:a0228812749fe03356dfee634cfa23660" id="r_a0228812749fe03356dfee634cfa23660"><td class="memItemLeft" align="right" valign="top"><a id="a0228812749fe03356dfee634cfa23660" name="a0228812749fe03356dfee634cfa23660"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>deactivate</b> ()</td></tr>
 <tr class="separator:a0228812749fe03356dfee634cfa23660"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49979c1a2884a7e736de8af3d3ce670e" id="r_a49979c1a2884a7e736de8af3d3ce670e"><td class="memItemLeft" align="right" valign="top"><a id="a49979c1a2884a7e736de8af3d3ce670e" name="a49979c1a2884a7e736de8af3d3ce670e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>retroactiveDecay</b> (double from, double to)</td></tr>
+<tr class="memitem:a49979c1a2884a7e736de8af3d3ce670e" id="r_a49979c1a2884a7e736de8af3d3ce670e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49979c1a2884a7e736de8af3d3ce670e">retroactiveDecay</a> (double from, double to)</td></tr>
+<tr class="memdesc:a49979c1a2884a7e736de8af3d3ce670e"><td class="mdescLeft">&#160;</td><td class="mdescRight">retroactively decays a <a class="el" href="#aac81fd09b1ae60d8d0425b641bc0ed8f">Neuron::membrane_potential</a>.  <br /></td></tr>
 <tr class="separator:a49979c1a2884a7e736de8af3d3ce670e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac426f10c4652ba939d31a230e2711021" id="r_ac426f10c4652ba939d31a230e2711021"><td class="memItemLeft" align="right" valign="top"><a id="ac426f10c4652ba939d31a230e2711021" name="ac426f10c4652ba939d31a230e2711021"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>accumulatePotential</b> (double value)</td></tr>
+<tr class="memitem:ac426f10c4652ba939d31a230e2711021" id="r_ac426f10c4652ba939d31a230e2711021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac426f10c4652ba939d31a230e2711021">accumulatePotential</a> (double value)</td></tr>
+<tr class="memdesc:ac426f10c4652ba939d31a230e2711021"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds to the <a class="el" href="#aac81fd09b1ae60d8d0425b641bc0ed8f">Neuron::membrane_potential</a>.  <br /></td></tr>
 <tr class="separator:ac426f10c4652ba939d31a230e2711021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a555e8b72a078f1c43cad85de5daabb7d" id="r_a555e8b72a078f1c43cad85de5daabb7d"><td class="memItemLeft" align="right" valign="top"><a id="a555e8b72a078f1c43cad85de5daabb7d" name="a555e8b72a078f1c43cad85de5daabb7d"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>generateInhibitoryStatus</b> ()</td></tr>
 <tr class="separator:a555e8b72a078f1c43cad85de5daabb7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af45ab4e600e3db93e11dff8ed96a8927" id="r_af45ab4e600e3db93e11dff8ed96a8927"><td class="memItemLeft" align="right" valign="top"><a id="af45ab4e600e3db93e11dff8ed96a8927" name="af45ab4e600e3db93e11dff8ed96a8927"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isActivated</b> () const</td></tr>
+<tr class="memitem:af45ab4e600e3db93e11dff8ed96a8927" id="r_af45ab4e600e3db93e11dff8ed96a8927"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af45ab4e600e3db93e11dff8ed96a8927">isActivated</a> () const</td></tr>
+<tr class="memdesc:af45ab4e600e3db93e11dff8ed96a8927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks activation status of a <a class="el" href="classNeuron.html">Neuron</a>.  <br /></td></tr>
 <tr class="separator:af45ab4e600e3db93e11dff8ed96a8927"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397629df9f8fd6d09cc261a0837e9dd3" id="r_a397629df9f8fd6d09cc261a0837e9dd3"><td class="memItemLeft" align="right" valign="top"><a id="a397629df9f8fd6d09cc261a0837e9dd3" name="a397629df9f8fd6d09cc261a0837e9dd3"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>getPotential</b> ()</td></tr>
 <tr class="separator:a397629df9f8fd6d09cc261a0837e9dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b0b017ce819f15f6dbb73b1d6b97480" id="r_a4b0b017ce819f15f6dbb73b1d6b97480"><td class="memItemLeft" align="right" valign="top"><a id="a4b0b017ce819f15f6dbb73b1d6b97480" name="a4b0b017ce819f15f6dbb73b1d6b97480"></a>
-<a class="el" href="classNeuronGroup.html">NeuronGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getGroup</b> ()</td></tr>
+<tr class="memitem:a4b0b017ce819f15f6dbb73b1d6b97480" id="r_a4b0b017ce819f15f6dbb73b1d6b97480"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classNeuronGroup.html">NeuronGroup</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b0b017ce819f15f6dbb73b1d6b97480">getGroup</a> ()</td></tr>
+<tr class="memdesc:a4b0b017ce819f15f6dbb73b1d6b97480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the owning group.  <br /></td></tr>
 <tr class="separator:a4b0b017ce819f15f6dbb73b1d6b97480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68307f75a11ba496e7eca586146d03ff" id="r_a68307f75a11ba496e7eca586146d03ff"><td class="memItemLeft" align="right" valign="top"><a id="a68307f75a11ba496e7eca586146d03ff" name="a68307f75a11ba496e7eca586146d03ff"></a>
 const list&lt; <a class="el" href="structMessage.html">Message</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getMessageVector</b> ()</td></tr>
@@ -204,8 +206,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a212dbcbfe100156def2f5466b48b3c96" id="r_a212dbcbfe100156def2f5466b48b3c96"><td class="memItemLeft" align="right" valign="top"><a id="a212dbcbfe100156def2f5466b48b3c96" name="a212dbcbfe100156def2f5466b48b3c96"></a>
 vector&lt; <a class="el" href="structLogData.html">LogData</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>log_data</b></td></tr>
 <tr class="separator:a212dbcbfe100156def2f5466b48b3c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac81fd09b1ae60d8d0425b641bc0ed8f" id="r_aac81fd09b1ae60d8d0425b641bc0ed8f"><td class="memItemLeft" align="right" valign="top"><a id="aac81fd09b1ae60d8d0425b641bc0ed8f" name="aac81fd09b1ae60d8d0425b641bc0ed8f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>membrane_potential</b></td></tr>
+<tr class="memitem:aac81fd09b1ae60d8d0425b641bc0ed8f" id="r_aac81fd09b1ae60d8d0425b641bc0ed8f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac81fd09b1ae60d8d0425b641bc0ed8f">membrane_potential</a></td></tr>
 <tr class="separator:aac81fd09b1ae60d8d0425b641bc0ed8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32ac1c08566736aff3509e4c88f16179" id="r_a32ac1c08566736aff3509e4c88f16179"><td class="memItemLeft" align="right" valign="top"><a id="a32ac1c08566736aff3509e4c88f16179" name="a32ac1c08566736aff3509e4c88f16179"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>excit_inhib_value</b></td></tr>
@@ -222,23 +223,217 @@ Neuron_t&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr
 <tr class="memitem:a6c3c07702e06beaade36fb5e17b473dc" id="r_a6c3c07702e06beaade36fb5e17b473dc"><td class="memItemLeft" align="right" valign="top"><a id="a6c3c07702e06beaade36fb5e17b473dc" name="a6c3c07702e06beaade36fb5e17b473dc"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>active</b> = false</td></tr>
 <tr class="separator:a6c3c07702e06beaade36fb5e17b473dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf1707d4dbe28c3566319a38a65166c4" id="r_abf1707d4dbe28c3566319a38a65166c4"><td class="memItemLeft" align="right" valign="top"><a id="abf1707d4dbe28c3566319a38a65166c4" name="abf1707d4dbe28c3566319a38a65166c4"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>last_decay</b></td></tr>
+<tr class="memitem:abf1707d4dbe28c3566319a38a65166c4" id="r_abf1707d4dbe28c3566319a38a65166c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf1707d4dbe28c3566319a38a65166c4">last_decay</a></td></tr>
 <tr class="separator:abf1707d4dbe28c3566319a38a65166c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa08d07c711caeb0c9dabc971efb14ed7" id="r_aa08d07c711caeb0c9dabc971efb14ed7"><td class="memItemLeft" align="right" valign="top"><a id="aa08d07c711caeb0c9dabc971efb14ed7" name="aa08d07c711caeb0c9dabc971efb14ed7"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>refractory_start</b> = 0.0</td></tr>
+<tr class="memitem:aa08d07c711caeb0c9dabc971efb14ed7" id="r_aa08d07c711caeb0c9dabc971efb14ed7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa08d07c711caeb0c9dabc971efb14ed7">refractory_start</a></td></tr>
 <tr class="separator:aa08d07c711caeb0c9dabc971efb14ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adde0fcab17f2565fba226219451ee834" id="r_adde0fcab17f2565fba226219451ee834"><td class="memItemLeft" align="right" valign="top"><a id="adde0fcab17f2565fba226219451ee834" name="adde0fcab17f2565fba226219451ee834"></a>
-vector&lt; <a class="el" href="classSynapse.html">Synapse</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PostSynapticConnnections</b></td></tr>
+<tr class="memitem:adde0fcab17f2565fba226219451ee834" id="r_adde0fcab17f2565fba226219451ee834"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classSynapse.html">Synapse</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adde0fcab17f2565fba226219451ee834">PostSynapticConnnections</a></td></tr>
 <tr class="separator:adde0fcab17f2565fba226219451ee834"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a0f1d540a1a545552d8c90f5b79a25b" id="r_a0a0f1d540a1a545552d8c90f5b79a25b"><td class="memItemLeft" align="right" valign="top"><a id="a0a0f1d540a1a545552d8c90f5b79a25b" name="a0a0f1d540a1a545552d8c90f5b79a25b"></a>
-vector&lt; <a class="el" href="classSynapse.html">Synapse</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PreSynapticConnections</b></td></tr>
+<tr class="memitem:a0a0f1d540a1a545552d8c90f5b79a25b" id="r_a0a0f1d540a1a545552d8c90f5b79a25b"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classSynapse.html">Synapse</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a0f1d540a1a545552d8c90f5b79a25b">PreSynapticConnections</a></td></tr>
 <tr class="separator:a0a0f1d540a1a545552d8c90f5b79a25b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0db3aa3a1baf8e4c06c85e7ab3f20ea4" id="r_a0db3aa3a1baf8e4c06c85e7ab3f20ea4"><td class="memItemLeft" align="right" valign="top"><a id="a0db3aa3a1baf8e4c06c85e7ab3f20ea4" name="a0db3aa3a1baf8e4c06c85e7ab3f20ea4"></a>
-list&lt; <a class="el" href="structMessage.html">Message</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>messages</b></td></tr>
+<tr class="memitem:a0db3aa3a1baf8e4c06c85e7ab3f20ea4" id="r_a0db3aa3a1baf8e4c06c85e7ab3f20ea4"><td class="memItemLeft" align="right" valign="top">list&lt; <a class="el" href="structMessage.html">Message</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0db3aa3a1baf8e4c06c85e7ab3f20ea4">messages</a></td></tr>
 <tr class="separator:a0db3aa3a1baf8e4c06c85e7ab3f20ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a12e0a9fe8b722ab44cbefa1361dc263b" name="a12e0a9fe8b722ab44cbefa1361dc263b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12e0a9fe8b722ab44cbefa1361dc263b">&#9670;&#160;</a></span>Neuron()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Neuron::Neuron </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_id</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classNeuronGroup.html">NeuronGroup</a> *</td>          <td class="paramname"><span class="paramname"><em>group</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Neuron_t</td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="classNeuron.html">Neuron</a>. </p>
+<p><a class="el" href="classNeuron.html">Neuron</a> is created with a random inhibitory status based on Neuron::generateInhibitoryStatus</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_id</td><td><a class="el" href="classNeuron.html">Neuron</a> ID </td></tr>
+    <tr><td class="paramname">group</td><td>pointer to owning <a class="el" href="classNeuronGroup.html">NeuronGroup</a> </td></tr>
+    <tr><td class="paramname">type</td><td>Neuron_t type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac426f10c4652ba939d31a230e2711021" name="ac426f10c4652ba939d31a230e2711021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac426f10c4652ba939d31a230e2711021">&#9670;&#160;</a></span>accumulatePotential()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Neuron::accumulatePotential </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>adds to the <a class="el" href="#aac81fd09b1ae60d8d0425b641bc0ed8f">Neuron::membrane_potential</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>value to be added </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abea5c41bfae8ec062bcc1ac8808beb71" name="abea5c41bfae8ec062bcc1ac8808beb71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea5c41bfae8ec062bcc1ac8808beb71">&#9670;&#160;</a></span>addMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Neuron::addMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structMessage.html">Message</a> *</td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a message to the queue. </p>
+<p>Messages are added in a sorted order in order to ensure a FIFO model</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>pointer to a <a class="el" href="structMessage.html">Message</a> struct </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a68e83a6fa5d258bcf741ac63babf224b" name="a68e83a6fa5d258bcf741ac63babf224b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68e83a6fa5d258bcf741ac63babf224b">&#9670;&#160;</a></span>addNeighbor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Neuron::addNeighbor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classNeuron.html">Neuron</a> *</td>          <td class="paramname"><span class="paramname"><em>neighbor</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>weight</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>adds a <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> to <a class="el" href="#adde0fcab17f2565fba226219451ee834">Neuron::PostSynapticConnnections</a>. Adds a <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> to both the Presynaptic and Postsynapic <a class="el" href="classNeuron.html">Neuron</a> respective <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> vectors. Either <a class="el" href="#adde0fcab17f2565fba226219451ee834">Neuron::PostSynapticConnnections</a> or <a class="el" href="#a0a0f1d540a1a545552d8c90f5b79a25b">Neuron::PreSynapticConnections</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">neighbor</td><td>Target connection </td></tr>
+    <tr><td class="paramname">weight</td><td>Weight for this edge </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b0b017ce819f15f6dbb73b1d6b97480" name="a4b0b017ce819f15f6dbb73b1d6b97480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b0b017ce819f15f6dbb73b1d6b97480">&#9670;&#160;</a></span>getGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classNeuronGroup.html">NeuronGroup</a> * Neuron::getGroup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a pointer to the owning group. </p>
+<dl class="section return"><dt>Returns</dt><dd>Neuron::group </dd></dl>
+
+</div>
+</div>
+<a id="af45ab4e600e3db93e11dff8ed96a8927" name="af45ab4e600e3db93e11dff8ed96a8927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45ab4e600e3db93e11dff8ed96a8927">&#9670;&#160;</a></span>isActivated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Neuron::isActivated </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks activation status of a <a class="el" href="classNeuron.html">Neuron</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool of activation status </dd></dl>
+
+</div>
+</div>
+<a id="a96e5633ab35d0c567712112607828fc9" name="a96e5633ab35d0c567712112607828fc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96e5633ab35d0c567712112607828fc9">&#9670;&#160;</a></span>recieveMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Neuron::recieveMessage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve and process all messages in the queue. </p>
+<p>For all the messages in <a class="el" href="#a0db3aa3a1baf8e4c06c85e7ab3f20ea4">Neuron::messages</a>, process the message contents, check membrane_potential status, and retroactively decay via <a class="el" href="#a49979c1a2884a7e736de8af3d3ce670e" title="retroactively decays a Neuron::membrane_potential.">Neuron::retroactiveDecay</a> </p>
+
+</div>
+</div>
+<a id="ac35d991a6113da31ad2961ca28242722" name="ac35d991a6113da31ad2961ca28242722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac35d991a6113da31ad2961ca28242722">&#9670;&#160;</a></span>refractory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Neuron::refractory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts the refractory period for a <a class="el" href="classNeuron.html">Neuron</a>. </p>
+<p>Sets the <a class="el" href="#aac81fd09b1ae60d8d0425b641bc0ed8f">Neuron::membrane_potential</a> to RuntimConfig::REFRACTORY_MEMBRANE_POTENTIAL and logs a refractory stage </p>
+
+</div>
+</div>
 <a id="a6817fc5bf2128150b41b65e74f018408" name="a6817fc5bf2128150b41b65e74f018408"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6817fc5bf2128150b41b65e74f018408">&#9670;&#160;</a></span>reset()</h2>
 
@@ -266,6 +461,57 @@ list&lt; <a class="el" href="structMessage.html">Message</a> * &gt;&#160;</td><t
 
 </div>
 </div>
+<a id="a7d9097ec78bd4b80d5d37074c278a421" name="a7d9097ec78bd4b80d5d37074c278a421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d9097ec78bd4b80d5d37074c278a421">&#9670;&#160;</a></span>retrieveMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structMessage.html">Message</a> * Neuron::retrieveMessage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>retrive the oldest <a class="el" href="structMessage.html">Message</a> from <a class="el" href="#a0db3aa3a1baf8e4c06c85e7ab3f20ea4">Neuron::messages</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to the <a class="el" href="structMessage.html">Message</a> struct </dd></dl>
+
+</div>
+</div>
+<a id="a49979c1a2884a7e736de8af3d3ce670e" name="a49979c1a2884a7e736de8af3d3ce670e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49979c1a2884a7e736de8af3d3ce670e">&#9670;&#160;</a></span>retroactiveDecay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Neuron::retroactiveDecay </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>from</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>retroactively decays a <a class="el" href="#aac81fd09b1ae60d8d0425b641bc0ed8f">Neuron::membrane_potential</a>. </p>
+<p>retroactively decays a <a class="el" href="classNeuron.html">Neuron</a> with a timestep of 2e-3 seconds</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td>The starting timestamp from which to decay </td></tr>
+    <tr><td class="paramname">to</td><td>The ending timestamp to decay to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4c7e22cc4b19ce29337dd5bec7ed5b34" name="a4c7e22cc4b19ce29337dd5bec7ed5b34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c7e22cc4b19ce29337dd5bec7ed5b34">&#9670;&#160;</a></span>run()</h2>
 
@@ -288,6 +534,9 @@ list&lt; <a class="el" href="structMessage.html">Message</a> * &gt;&#160;</td><t
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Main run cycle for a <a class="el" href="classNeuron.html">Neuron</a>. </p>
+<p>Checks <a class="el" href="#aac81fd09b1ae60d8d0425b641bc0ed8f">Neuron::membrane_potential</a> and calls <a class="el" href="#aa3ded32b9bcd348137a99c5bd1ae56ae" title="send Messages to all elements of Neuron::PostSynapticConnnections.">Neuron::sendMessages</a> if over the RuntimConfig::ACTIVATION_THRESHOLD </p>
 
 <p>Reimplemented in <a class="el" href="classInputNeuron.html#ab00dcb6b36b2f185de2f26ed10fb9c45">InputNeuron</a>.</p>
 
@@ -316,7 +565,35 @@ list&lt; <a class="el" href="structMessage.html">Message</a> * &gt;&#160;</td><t
 </table>
 </div><div class="memdoc">
 
+<p>send Messages to all elements of <a class="el" href="#adde0fcab17f2565fba226219451ee834">Neuron::PostSynapticConnnections</a>. </p>
+<p>Enters a refractory phase after sending all messages </p>
+
 <p>Reimplemented in <a class="el" href="classInputNeuron.html#a29a1ad409fae1833da6e3183bac629bf">InputNeuron</a>.</p>
+
+</div>
+</div>
+<a id="ad680eded50a4eafd4b44c873040bf414" name="ad680eded50a4eafd4b44c873040bf414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad680eded50a4eafd4b44c873040bf414">&#9670;&#160;</a></span>setType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Neuron::setType </td>
+          <td>(</td>
+          <td class="paramtype">Neuron_t</td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the type of a <a class="el" href="classNeuron.html">Neuron</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Neuron_t type </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -337,6 +614,148 @@ list&lt; <a class="el" href="structMessage.html">Message</a> * &gt;&#160;</td><t
 
 <p>Transfer data to <a class="el" href="classLog.html" title="Logging class.">Log</a>. </p>
 <p>Transfers data from thread local Neuron::log_data to global Log::log_data </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="abf1707d4dbe28c3566319a38a65166c4" name="abf1707d4dbe28c3566319a38a65166c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1707d4dbe28c3566319a38a65166c4">&#9670;&#160;</a></span>last_decay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Neuron::last_decay</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The timestamp of the most recent decay </p>
+
+</div>
+</div>
+<a id="aac81fd09b1ae60d8d0425b641bc0ed8f" name="aac81fd09b1ae60d8d0425b641bc0ed8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac81fd09b1ae60d8d0425b641bc0ed8f">&#9670;&#160;</a></span>membrane_potential</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Neuron::membrane_potential</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Membrane potential of a <a class="el" href="classNeuron.html">Neuron</a> </p>
+
+</div>
+</div>
+<a id="a0db3aa3a1baf8e4c06c85e7ab3f20ea4" name="a0db3aa3a1baf8e4c06c85e7ab3f20ea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db3aa3a1baf8e4c06c85e7ab3f20ea4">&#9670;&#160;</a></span>messages</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list&lt;<a class="el" href="structMessage.html">Message</a> *&gt; Neuron::messages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>list of <a class="el" href="structMessage.html">Message</a> pointers <br  />
+ </p>
+
+</div>
+</div>
+<a id="adde0fcab17f2565fba226219451ee834" name="adde0fcab17f2565fba226219451ee834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde0fcab17f2565fba226219451ee834">&#9670;&#160;</a></span>PostSynapticConnnections</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="classSynapse.html">Synapse</a> *&gt; Neuron::PostSynapticConnnections</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>vector of <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> pointers to which this <a class="el" href="classNeuron.html">Neuron</a> is connected </p>
+
+</div>
+</div>
+<a id="a0a0f1d540a1a545552d8c90f5b79a25b" name="a0a0f1d540a1a545552d8c90f5b79a25b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a0f1d540a1a545552d8c90f5b79a25b">&#9670;&#160;</a></span>PreSynapticConnections</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="classSynapse.html">Synapse</a> *&gt; Neuron::PreSynapticConnections</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>vector of <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> pointers from which this <a class="el" href="classNeuron.html">Neuron</a> has Connections </p>
+
+</div>
+</div>
+<a id="aa08d07c711caeb0c9dabc971efb14ed7" name="aa08d07c711caeb0c9dabc971efb14ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa08d07c711caeb0c9dabc971efb14ed7">&#9670;&#160;</a></span>refractory_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Neuron::refractory_start</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">      0.0</div>
+</div><!-- fragment --><p>The timestamp of most recent refractory period start </p>
 
 </div>
 </div>
