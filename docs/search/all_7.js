@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['neuron_0',['Neuron',['../classNeuron.html',1,'']]],
-  ['neuroncount_1',['neuronCount',['../classNeuronGroup.html#a76746b0d3ad8753663fa498193ee7cb5',1,'NeuronGroup']]],
-  ['neurongroup_2',['NeuronGroup',['../classNeuronGroup.html',1,'NeuronGroup'],['../classNeuronGroup.html#a1338c0597c59d8891120c4074c20eefc',1,'NeuronGroup::NeuronGroup()']]],
-  ['neuroninteraction_3',['neuronInteraction',['../classLog.html#a156ddaac0a6444acf004cc18a1fba3ef',1,'Log']]],
-  ['neurons_4',['neurons',['../classSNN.html#aac15ac34919fbafa7e7830a444fa2e66',1,'SNN']]],
-  ['neurontype_5',['neuronType',['../classLog.html#a060fc73a1edbc89ceccae918fb7625f4',1,'Log']]],
-  ['neuronvalue_6',['neuronValue',['../classLog.html#a3e2c5de9429ccdfca45963de44569470',1,'Log']]]
+  ['maximum_5fedges_0',['maximum_edges',['../classSNN.html#a69f238129ae97e3b6ad72bc727d86f2a',1,'SNN']]],
+  ['message_1',['Message',['../structMessage.html',1,'']]],
+  ['message_2ehpp_2',['message.hpp',['../message_8hpp.html',1,'']]],
+  ['message_5ft_3',['Message_t',['../message_8hpp.html#a1045de1f1e71fb94e8c4cac584c24367',1,'message.hpp']]],
+  ['mutex_4',['Mutex',['../structMutex.html',1,'']]]
 ];

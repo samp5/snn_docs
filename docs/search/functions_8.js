@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['reset_0',['reset',['../classInputNeuron.html#aed48281c94ba4dc0731e12f568bc2783',1,'InputNeuron::reset()'],['../classSNN.html#a515b4c14ba89c12db13ade2b952394cc',1,'SNN::reset()'],['../classNeuronGroup.html#a813d3675691d940fc1f8e7bca28e801c',1,'NeuronGroup::reset()']]],
-  ['run_1',['run',['../classInputNeuron.html#ab00dcb6b36b2f185de2f26ed10fb9c45',1,'InputNeuron::run()'],['../classNeuronGroup.html#a64b77eac9d34d0e3c52fb8aa9d194a8c',1,'NeuronGroup::run()']]]
+  ['neuroncount_0',['neuronCount',['../classNeuronGroup.html#a76746b0d3ad8753663fa498193ee7cb5',1,'NeuronGroup']]],
+  ['neurongroup_1',['NeuronGroup',['../classNeuronGroup.html#a1338c0597c59d8891120c4074c20eefc',1,'NeuronGroup']]],
+  ['neuroninteraction_2',['neuronInteraction',['../classLog.html#a156ddaac0a6444acf004cc18a1fba3ef',1,'Log']]],
+  ['neurontype_3',['neuronType',['../classLog.html#a060fc73a1edbc89ceccae918fb7625f4',1,'Log']]],
+  ['neuronvalue_4',['neuronValue',['../classLog.html#a3e2c5de9429ccdfca45963de44569470',1,'Log']]]
 ];

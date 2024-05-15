@@ -99,6 +99,11 @@ $(function(){initNavTree('classSynapse.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Synapse Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> class for managing connections.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="synapse_8hpp_source.html">synapse.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -111,8 +116,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8d5139e7da9c9a5550dde0eccf6a071" id="r_ac8d5139e7da9c9a5550dde0eccf6a071"><td class="memItemLeft" align="right" valign="top"><a id="ac8d5139e7da9c9a5550dde0eccf6a071" name="ac8d5139e7da9c9a5550dde0eccf6a071"></a>
 <a class="el" href="classNeuron.html">Neuron</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getPreSynaptic</b> ()</td></tr>
 <tr class="separator:ac8d5139e7da9c9a5550dde0eccf6a071"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36c8927f31292359bdd1a1d666d432ec" id="r_a36c8927f31292359bdd1a1d666d432ec"><td class="memItemLeft" align="right" valign="top"><a id="a36c8927f31292359bdd1a1d666d432ec" name="a36c8927f31292359bdd1a1d666d432ec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>propagate</b> ()</td></tr>
+<tr class="memitem:a36c8927f31292359bdd1a1d666d432ec" id="r_a36c8927f31292359bdd1a1d666d432ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36c8927f31292359bdd1a1d666d432ec">propagate</a> ()</td></tr>
+<tr class="memdesc:a36c8927f31292359bdd1a1d666d432ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propagates a message.  <br /></td></tr>
 <tr class="separator:a36c8927f31292359bdd1a1d666d432ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3244ca41feb08afcb0c5309b17fb0a9" id="r_ad3244ca41feb08afcb0c5309b17fb0a9"><td class="memItemLeft" align="right" valign="top"><a id="ad3244ca41feb08afcb0c5309b17fb0a9" name="ad3244ca41feb08afcb0c5309b17fb0a9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>alterWeight</b> (double weight)</td></tr>
@@ -136,6 +141,30 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>_weight</b> = 0.0</
 double&#160;</td><td class="memItemRight" valign="bottom"><b>_last_weight</b> = -1.0</td></tr>
 <tr class="separator:ac8b0aa25f17829da47d0ce3f76e547d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> class for managing connections. </p>
+<p>All <code><a class="el" href="classNeuron.html">Neuron</a></code>s hold a vector of PostSynaptic and Presynaptic <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> pointers The <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> manages edge weighs and propagation </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a36c8927f31292359bdd1a1d666d432ec" name="a36c8927f31292359bdd1a1d666d432ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c8927f31292359bdd1a1d666d432ec">&#9670;&#160;</a></span>propagate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Synapse::propagate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Propagates a message. </p>
+<p>Activates the recieving neuron and calls Neuron::addMessage </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="synapse_8hpp_source.html">synapse.hpp</a></li>
 <li>src/<b>synapse.cpp</b></li>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['log_0',['log',['../classLog.html#aca503aac97649822c8e5f1f60e8cf30a',1,'Log']]],
-  ['logconfig_1',['logConfig',['../classLog.html#ae9b909233b08f80dae53fc32675ba223',1,'Log']]]
+  ['inputneuron_0',['InputNeuron',['../classInputNeuron.html#aa468c99d2099f9864c9620dfeed10684',1,'InputNeuron']]],
+  ['inrefractory_1',['inRefractory',['../classInputNeuron.html#a2bdb2a4bbf03dd93b03bbb2cc24465a6',1,'InputNeuron']]]
 ];

@@ -113,15 +113,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a36301d81fc9aa79511f8048e3fce0362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bd2905d01bdef229df9eb0d9f9952ae" id="r_a1bd2905d01bdef229df9eb0d9f9952ae"><td class="memItemLeft" align="right" valign="top"><a id="a1bd2905d01bdef229df9eb0d9f9952ae" name="a1bd2905d01bdef229df9eb0d9f9952ae"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>generateNewConfig</b> ()</td></tr>
+<tr class="memdesc:a1bd2905d01bdef229df9eb0d9f9952ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a new config file to run_config/base_config.toml. <br /></td></tr>
 <tr class="separator:a1bd2905d01bdef229df9eb0d9f9952ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fd47c7d6c104c25f7f5c66d7d5d0b5a" id="r_a7fd47c7d6c104c25f7f5c66d7d5d0b5a"><td class="memItemLeft" align="right" valign="top"><a id="a7fd47c7d6c104c25f7f5c66d7d5d0b5a" name="a7fd47c7d6c104c25f7f5c66d7d5d0b5a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>useBaseToml</b> ()</td></tr>
+<tr class="memdesc:a7fd47c7d6c104c25f7f5c66d7d5d0b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use base_config.toml. <br /></td></tr>
 <tr class="separator:a7fd47c7d6c104c25f7f5c66d7d5d0b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54591f45b52fd920b73bb56440bac482" id="r_a54591f45b52fd920b73bb56440bac482"><td class="memItemLeft" align="right" valign="top"><a id="a54591f45b52fd920b73bb56440bac482" name="a54591f45b52fd920b73bb56440bac482"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>parseArgs</b> (char **argv, int argc)</td></tr>
+<tr class="memitem:a54591f45b52fd920b73bb56440bac482" id="r_a54591f45b52fd920b73bb56440bac482"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54591f45b52fd920b73bb56440bac482">parseArgs</a> (char **argv, int argc)</td></tr>
+<tr class="memdesc:a54591f45b52fd920b73bb56440bac482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse command line arguments.  <br /></td></tr>
 <tr class="separator:a54591f45b52fd920b73bb56440bac482"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c2ccb048d7de18c5b17f0cad2251cb1" id="r_a7c2ccb048d7de18c5b17f0cad2251cb1"><td class="memItemLeft" align="right" valign="top"><a id="a7c2ccb048d7de18c5b17f0cad2251cb1" name="a7c2ccb048d7de18c5b17f0cad2251cb1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>checkStartCond</b> ()</td></tr>
+<tr class="memitem:a7c2ccb048d7de18c5b17f0cad2251cb1" id="r_a7c2ccb048d7de18c5b17f0cad2251cb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c2ccb048d7de18c5b17f0cad2251cb1">checkStartCond</a> ()</td></tr>
+<tr class="memdesc:a7c2ccb048d7de18c5b17f0cad2251cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks various start conditions.  <br /></td></tr>
 <tr class="separator:a7c2ccb048d7de18c5b17f0cad2251cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -197,11 +199,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>time_per_stimulus</b><
 </div><!-- fragment --><p>Initialization of the struct should follow this pattern:</p>
 <div class="fragment"><div class="line"><a class="code hl_struct" href="structRuntimConfig.html">RuntimConfig</a> cf;</div>
 <div class="line"><a class="code hl_struct" href="structMutex.html">Mutex</a> mx;</div>
-<div class="line"><span class="keywordflow">if</span> (!cf.parseArgs(argv, argc)) {</div>
-<div class="line">  mx.destroy_mutexes();</div>
+<div class="line"><span class="keywordflow">if</span> (!cf.<a class="code hl_function" href="#a54591f45b52fd920b73bb56440bac482">parseArgs</a>(argv, argc)) {</div>
+<div class="line">  mx.<a class="code hl_function" href="structMutex.html#a8645adb89c276ce2e6282097d9c77320">destroy_mutexes</a>();</div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 <div class="ttc" id="astructMutex_html"><div class="ttname"><a href="structMutex.html">Mutex</a></div><div class="ttdoc">Holds all mutexes.</div><div class="ttdef"><b>Definition</b> runtime.hpp:11</div></div>
+<div class="ttc" id="astructMutex_html_a8645adb89c276ce2e6282097d9c77320"><div class="ttname"><a href="structMutex.html#a8645adb89c276ce2e6282097d9c77320">Mutex::destroy_mutexes</a></div><div class="ttdeci">void destroy_mutexes()</div><div class="ttdoc">Destroy all mutexes in use.</div><div class="ttdef"><b>Definition</b> runtime.cpp:11</div></div>
+<div class="ttc" id="astructRuntimConfig_html_a54591f45b52fd920b73bb56440bac482"><div class="ttname"><a href="#a54591f45b52fd920b73bb56440bac482">RuntimConfig::parseArgs</a></div><div class="ttdeci">int parseArgs(char **argv, int argc)</div><div class="ttdoc">Parse command line arguments.</div><div class="ttdef"><b>Definition</b> runtime.cpp:299</div></div>
 </div><!-- fragment --><p>The <a class="el" href="structRuntimConfig.html" title="Holds all configuration options.">RuntimConfig</a> is based on a toml configuration file located in run_config/</p>
 <p>If no configuration file is specified and run_config/base_config.toml is not found, the following configuration file is created as run_config/base_config.toml and used.</p>
 <details >
@@ -270,6 +274,31 @@ base_config.toml </summary>
 </div><!-- fragment --><p></p>
 </details>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7c2ccb048d7de18c5b17f0cad2251cb1" name="a7c2ccb048d7de18c5b17f0cad2251cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2ccb048d7de18c5b17f0cad2251cb1">&#9670;&#160;</a></span>checkStartCond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RuntimConfig::checkStartCond </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks various start conditions. </p>
+<p>The following conditions are checked</p><ul>
+<li>NUMBER_INPUT_NEURONS &gt;= NUMBER_NEURONS</li>
+<li>NUMBER_INPUT_NEURONS % NUMBER_GROUPS == 0</li>
+<li>NUMBER_NEURONS &amp; NUMBER_GROUPS == 0</li>
+<li>NUMBER_EDGES &lt;= <a class="el" href="classSNN.html#a69f238129ae97e3b6ad72bc727d86f2a" title="return maximum number of edges.">SNN::maximum_edges()</a> </li>
+</ul>
+
+</div>
+</div>
 <a id="a3b1b34ce746ac8a6d571373b5d6a4aa5" name="a3b1b34ce746ac8a6d571373b5d6a4aa5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b1b34ce746ac8a6d571373b5d6a4aa5">&#9670;&#160;</a></span>parse_line_range()</h2>
 
@@ -292,6 +321,34 @@ base_config.toml </summary>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>: Vector of line numbers to be read </dd></dl>
+
+</div>
+</div>
+<a id="a54591f45b52fd920b73bb56440bac482" name="a54591f45b52fd920b73bb56440bac482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54591f45b52fd920b73bb56440bac482">&#9670;&#160;</a></span>parseArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RuntimConfig::parseArgs </td>
+          <td>(</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parse command line arguments. </p>
+<p>Valid command line arguments are</p><ul>
+<li>&lt;file_name&gt;</li>
+<li>&ndash;help</li>
+</ul>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>

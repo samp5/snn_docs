@@ -126,7 +126,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>join</b> ()</td></tr>
 <tr class="memdesc:a515b4c14ba89c12db13ade2b952394cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the Network.  <br /></td></tr>
 <tr class="separator:a515b4c14ba89c12db13ade2b952394cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4396f2fecf58821280fd0064c30ea3a2" id="r_a4396f2fecf58821280fd0064c30ea3a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4396f2fecf58821280fd0064c30ea3a2">generateRandomSynapses</a> ()</td></tr>
-<tr class="memdesc:a4396f2fecf58821280fd0064c30ea3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate <a class="el" href="classSynapse.html">Synapse</a> connections between all <code><a class="el" href="classNeuron.html">Neuron</a></code>s in <a class="el" href="#a6f5a2fe1dbe40058f29ac1eac7b5d33d">SNN::groups</a>.  <br /></td></tr>
+<tr class="memdesc:a4396f2fecf58821280fd0064c30ea3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">generate <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> connections between all <code><a class="el" href="classNeuron.html">Neuron</a></code>s in <a class="el" href="#a6f5a2fe1dbe40058f29ac1eac7b5d33d">SNN::groups</a>.  <br /></td></tr>
 <tr class="separator:a4396f2fecf58821280fd0064c30ea3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cb9d7d92cf0c8ab6d41716618091c28" id="r_a9cb9d7d92cf0c8ab6d41716618091c28"><td class="memItemLeft" align="right" valign="top"><a id="a9cb9d7d92cf0c8ab6d41716618091c28" name="a9cb9d7d92cf0c8ab6d41716618091c28"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>generateNeuronVec</b> ()</td></tr>
@@ -221,7 +221,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Generate a map associating <code><a class="el" href="classNeuron.html">Neuron</a></code>s with all possible connections. </p>
-<p>The following restrictions are applied to <a class="el" href="classSynapse.html">Synapse</a> formation</p><ul>
+<p>The following restrictions are applied to <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> formation</p><ul>
 <li><code><a class="el" href="classInputNeuron.html">InputNeuron</a></code>s cannot have incoming connections</li>
 <li>There are no reflextive or symmetric edges allowed<ul>
 <li>i.e. No self-connections or connections between Neurons for which a connection already exists </li>
@@ -246,8 +246,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>generate <a class="el" href="classSynapse.html">Synapse</a> connections between all <code><a class="el" href="classNeuron.html">Neuron</a></code>s in <a class="el" href="#a6f5a2fe1dbe40058f29ac1eac7b5d33d">SNN::groups</a>. </p>
-<p>Add an amount of <code><a class="el" href="classSynapse.html">Synapse</a></code>s consistent with RuntimConfig::NUMBER_EDGES according to restrictions placed upon viable connections in <a class="el" href="#ac26aafa244d29e9b1b075d21a4099855" title="Generate a map associating Neurons with all possible connections.">SNN::generateNeighborOptions</a></p>
+<p>generate <a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a> connections between all <code><a class="el" href="classNeuron.html">Neuron</a></code>s in <a class="el" href="#a6f5a2fe1dbe40058f29ac1eac7b5d33d">SNN::groups</a>. </p>
+<p>Add an amount of <code><a class="el" href="classSynapse.html" title="Synapse class for managing connections.">Synapse</a></code>s consistent with RuntimConfig::NUMBER_EDGES according to restrictions placed upon viable connections in <a class="el" href="#ac26aafa244d29e9b1b075d21a4099855" title="Generate a map associating Neurons with all possible connections.">SNN::generateNeighborOptions</a></p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ac26aafa244d29e9b1b075d21a4099855" title="Generate a map associating Neurons with all possible connections.">SNN::generateNeighborOptions</a> </dd></dl>
 
 </div>

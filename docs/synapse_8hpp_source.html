@@ -105,28 +105,29 @@ $(function(){initNavTree('synapse_8hpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="message_8hpp.html">message.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">class </span><a class="code hl_class" href="classNeuron.html">Neuron</a>;</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classSynapse.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="classSynapse.html">Synapse</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  <a class="code hl_class" href="classSynapse.html">Synapse</a>(<a class="code hl_class" href="classNeuron.html">Neuron</a> *from, <a class="code hl_class" href="classNeuron.html">Neuron</a> *to, <span class="keywordtype">double</span> w)</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>      : _origin(from), _destination(to), _weight(w){};</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <a class="code hl_class" href="classNeuron.html">Neuron</a> *getPostSynaptic() { <span class="keywordflow">return</span> this-&gt;_destination; }</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <a class="code hl_class" href="classNeuron.html">Neuron</a> *getPreSynaptic() { <span class="keywordflow">return</span> this-&gt;_origin; }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keywordtype">void</span> propagate();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keywordtype">void</span> alterWeight(<span class="keywordtype">double</span> weight);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keywordtype">double</span> getWeight() { <span class="keywordflow">return</span> this-&gt;_weight; }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_class" href="classNeuron.html">Neuron</a> *_origin = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_class" href="classNeuron.html">Neuron</a> *_destination = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keywordtype">double</span> _weight = 0.0;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordtype">double</span> _last_weight = -1.0;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
-</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classSynapse.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="classSynapse.html">Synapse</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <a class="code hl_class" href="classSynapse.html">Synapse</a>(<a class="code hl_class" href="classNeuron.html">Neuron</a> *from, <a class="code hl_class" href="classNeuron.html">Neuron</a> *to, <span class="keywordtype">double</span> w)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>      : _origin(from), _destination(to), _weight(w){};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_class" href="classNeuron.html">Neuron</a> *getPostSynaptic() { <span class="keywordflow">return</span> this-&gt;_destination; }</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_class" href="classNeuron.html">Neuron</a> *getPreSynaptic() { <span class="keywordflow">return</span> this-&gt;_origin; }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classSynapse.html#a36c8927f31292359bdd1a1d666d432ec">propagate</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordtype">void</span> alterWeight(<span class="keywordtype">double</span> weight);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordtype">double</span> getWeight() { <span class="keywordflow">return</span> this-&gt;_weight; }</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">// !SYNAPSE</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <a class="code hl_class" href="classNeuron.html">Neuron</a> *_origin = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <a class="code hl_class" href="classNeuron.html">Neuron</a> *_destination = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordtype">double</span> _weight = 0.0;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">double</span> _last_weight = -1.0;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif </span><span class="comment">// !SYNAPSE</span></div>
 <div class="ttc" id="aclassNeuron_html"><div class="ttname"><a href="classNeuron.html">Neuron</a></div><div class="ttdef"><b>Definition</b> neuron.hpp:22</div></div>
-<div class="ttc" id="aclassSynapse_html"><div class="ttname"><a href="classSynapse.html">Synapse</a></div><div class="ttdef"><b>Definition</b> synapse.hpp:6</div></div>
+<div class="ttc" id="aclassSynapse_html"><div class="ttname"><a href="classSynapse.html">Synapse</a></div><div class="ttdoc">Synapse class for managing connections.</div><div class="ttdef"><b>Definition</b> synapse.hpp:13</div></div>
+<div class="ttc" id="aclassSynapse_html_a36c8927f31292359bdd1a1d666d432ec"><div class="ttname"><a href="classSynapse.html#a36c8927f31292359bdd1a1d666d432ec">Synapse::propagate</a></div><div class="ttdeci">void propagate()</div><div class="ttdoc">Propagates a message.</div><div class="ttdef"><b>Definition</b> synapse.cpp:11</div></div>
 <div class="ttc" id="amessage_8hpp_html"><div class="ttname"><a href="message_8hpp.html">message.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -55,6 +55,7 @@ var NAVTREEINDEX0 =
 "classSNN.html#aeef92f44c8a5f4d6543894d0a2c793e0":[0,0,8,11],
 "classSNN.html#af1bbf8d335c15aa0fbf3dcd9922c9e37":[0,0,8,5],
 "classSynapse.html":[0,0,9],
+"classSynapse.html#a36c8927f31292359bdd1a1d666d432ec":[0,0,9,0],
 "classes.html":[0,1],
 "dir_68267d1309a1af8e8297ef4c3efbcdba.html":[1,0,0],
 "files.html":[1,0],
@@ -94,8 +95,13 @@ var NAVTREEINDEX0 =
 "structLogData.html":[0,0,2],
 "structMessage.html":[0,0,3],
 "structMutex.html":[0,0,4],
+"structMutex.html#a8645adb89c276ce2e6282097d9c77320":[0,0,4,0],
 "structRuntimConfig.html":[0,0,7],
-"structRuntimConfig.html#a36301d81fc9aa79511f8048e3fce0362":[0,0,7,1],
-"structRuntimConfig.html#a3b1b34ce746ac8a6d571373b5d6a4aa5":[0,0,7,0],
+"structRuntimConfig.html#a1bd2905d01bdef229df9eb0d9f9952ae":[0,0,7,1],
+"structRuntimConfig.html#a36301d81fc9aa79511f8048e3fce0362":[0,0,7,4],
+"structRuntimConfig.html#a3b1b34ce746ac8a6d571373b5d6a4aa5":[0,0,7,2],
+"structRuntimConfig.html#a54591f45b52fd920b73bb56440bac482":[0,0,7,3],
+"structRuntimConfig.html#a7c2ccb048d7de18c5b17f0cad2251cb1":[0,0,7,0],
+"structRuntimConfig.html#a7fd47c7d6c104c25f7f5c66d7d5d0b5a":[0,0,7,5],
 "synapse_8hpp_source.html":[1,0,0,7]
 };

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_0',['value',['../classLog.html#aba6f79a76388d528728e7787fa79ccc4',1,'Log']]]
+  ['transferdata_0',['transferData',['../classNeuron.html#ae9698266eec97fb479f64bae670fd10b',1,'Neuron']]]
 ];

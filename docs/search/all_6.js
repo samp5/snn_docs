@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['maximum_5fedges_0',['maximum_edges',['../classSNN.html#a69f238129ae97e3b6ad72bc727d86f2a',1,'SNN']]],
-  ['message_1',['Message',['../structMessage.html',1,'']]],
-  ['message_2ehpp_2',['message.hpp',['../message_8hpp.html',1,'']]],
-  ['message_5ft_3',['Message_t',['../message_8hpp.html#a1045de1f1e71fb94e8c4cac584c24367',1,'message.hpp']]],
-  ['mutex_4',['Mutex',['../structMutex.html',1,'']]]
+  ['log_0',['Log',['../classLog.html',1,'']]],
+  ['log_1',['log',['../classLog.html#aca503aac97649822c8e5f1f60e8cf30a',1,'Log']]],
+  ['log_2ehpp_2',['log.hpp',['../log_8hpp.html',1,'']]],
+  ['logconfig_3',['logConfig',['../classLog.html#ae9b909233b08f80dae53fc32675ba223',1,'Log']]],
+  ['logdata_4',['LogData',['../structLogData.html',1,'']]],
+  ['loglevel_5',['LogLevel',['../log_8hpp.html#aca1fd1d8935433e6ba2e3918214e07f9',1,'log.hpp']]]
 ];
